@@ -34,7 +34,7 @@ if st.button("Analyze Sepsis Risk", type="primary"):
 
     try:
         # Send request to the backend
-        response = requests.post("http://127.0.0.1:5000/predict", json=api_data)
+        response = requests.post("https://sepsis-detector.onrender.com/predict", json=api_data)
         result = response.json()
 
         if "probability" in result:
