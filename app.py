@@ -1,10 +1,12 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS  # Import CORS
 import pandas as pd
 import joblib
 import json
 
 # Initialize Flask app
 app = Flask(__name__)
+CORS(app)
 
 # Load the trained model and feature means
 model = joblib.load("sepsis_xgb_balanced.pkl")
