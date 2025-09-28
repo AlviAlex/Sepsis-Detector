@@ -6,3 +6,4 @@ Flask
 gunicorn
 streamlit
 requests
+Flask-CORS
