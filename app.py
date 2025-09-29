@@ -16,6 +16,10 @@ with open('feature_means.json', 'r') as f:
 # Get the list of all features the model was trained on
 ALL_MODEL_FEATURES = list(feature_means.keys())
 
+@app.route('/')
+def home():
+    return "Sepsis Detector API is online and running!", 200
+
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
